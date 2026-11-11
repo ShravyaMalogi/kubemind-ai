@@ -1,4 +1,4 @@
-# ☸️ KubeMind AI — Kubernetes Troubleshooting Assistant
+# KubeMind AI — Kubernetes Troubleshooting Assistant
 
 **An AI-powered DevOps assistant that helps diagnose Kubernetes issues, identify potential root causes, and recommend troubleshooting steps.**
 
@@ -6,7 +6,7 @@ KubeMind AI combines Kubernetes diagnostics with Google's Gemini API to make Kub
 
 Instead of manually interpreting pod failures and container statuses, KubeMind analyzes diagnostic information and provides clear explanations, severity levels, recommended commands, and possible resolutions.
 
-## 🚀 Features
+## Features
 
 - **AI-Powered Troubleshooting:** Uses Google Gemini to analyze Kubernetes pod information and explain potential issues.
 - **Automated Diagnostics:** Detects common Kubernetes problems such as `CrashLoopBackOff`, `ImagePullBackOff`, and `Pending` pods.
@@ -16,7 +16,7 @@ Instead of manually interpreting pod failures and container statuses, KubeMind a
 - **Rule-Based Fallback:** Provides basic diagnostics even when the AI service is unavailable.
 - **Modular Architecture:** Separates Kubernetes diagnostics, AI analysis, and dashboard functionality.
 
-## 🖥️ Dashboard
+## Dashboard
 
 The Streamlit dashboard provides an overview of Kubernetes pod health, including:
 
@@ -28,7 +28,7 @@ The Streamlit dashboard provides an overview of Kubernetes pod health, including
 
 *The current dashboard uses sample pod data. Live cluster integration is a planned enhancement.*
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -39,7 +39,7 @@ The Streamlit dashboard provides an overview of Kubernetes pod health, including
 | python-dotenv | Environment variable management |
 | Pytest | Automated testing |
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 kubemind-ai/
@@ -66,7 +66,7 @@ kubemind-ai/
 └── README.md
 ```
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -102,7 +102,7 @@ python -m streamlit run app/dashboard.py --server.address 0.0.0.0
 
 Open the Streamlit URL provided in your terminal to access the dashboard.
 
-## 🧠 How It Works
+## How It Works
 
 1. Kubernetes pod information is collected or supplied to the diagnostic engine.
 2. The diagnostic module identifies common pod issues.
@@ -111,7 +111,7 @@ Open the Streamlit URL provided in your terminal to access the dashboard.
 5. The dashboard displays the diagnosis, severity, recommended commands, and suggested resolution.
 6. If AI analysis fails, KubeMind falls back to its rule-based diagnostic engine.
 
-## 🧪 Running Tests
+## Running Tests
 
 Run the automated tests using:
 
