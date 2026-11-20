@@ -1,4 +1,4 @@
-# ☸️ KubeMind AI – Kubernetes Troubleshooting Assistant
+# KubeMind AI – Kubernetes Troubleshooting Assistant
 
 An AI-powered DevOps assistant that analyzes Kubernetes pod issues, identifies potential root causes, and recommends troubleshooting steps using **Google Gemini AI**.
 
@@ -6,15 +6,13 @@ KubeMind combines Kubernetes diagnostics with AI-generated insights to simplify 
 
 ## 📸 Dashboard Preview
 
-![KubeMind Dashboard](media/img01.png)
-
-![Pod Monitoring](media/img02.png)
-
-![AI Troubleshooting Report](media/img03.png)
-
-![Recommended Troubleshooting Commands](media/img04.png)
-
-![Suggested Resolutions](media/img05.png)
+<p align="center">
+  <img src="media/img01.png" width="100%" />
+  <img src="media/img02.png" width="100%" />
+  <img src="media/img03.png" width="100%" />
+  <img src="media/img04.png" width="100%" />
+  <img src="media/img05.png" width="100%" />
+</p>
 
 ## ✨ Features
 
