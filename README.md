@@ -1,45 +1,43 @@
-# KubeMind AI — Kubernetes Troubleshooting Assistant
+# ☸️ KubeMind AI – Kubernetes Troubleshooting Assistant
 
-**An AI-powered DevOps assistant that helps diagnose Kubernetes issues, identify potential root causes, and recommend troubleshooting steps.**
+An AI-powered DevOps assistant that analyzes Kubernetes pod issues, identifies potential root causes, and recommends troubleshooting steps using **Google Gemini AI**.
 
-KubeMind AI combines Kubernetes diagnostics with Google's Gemini API to make Kubernetes troubleshooting easier to understand and more accessible.
+KubeMind combines Kubernetes diagnostics with AI-generated insights to simplify infrastructure monitoring and troubleshooting.
 
-Instead of manually interpreting pod failures and container statuses, KubeMind analyzes diagnostic information and provides clear explanations, severity levels, recommended commands, and possible resolutions.
+## 📸 Dashboard Preview
 
-## Features
+![KubeMind Dashboard](media/img01.png)
 
-- **AI-Powered Troubleshooting:** Uses Google Gemini to analyze Kubernetes pod information and explain potential issues.
-- **Automated Diagnostics:** Detects common Kubernetes problems such as `CrashLoopBackOff`, `ImagePullBackOff`, and `Pending` pods.
-- **Severity Classification:** Categorizes detected issues by severity.
-- **Troubleshooting Recommendations:** Suggests useful `kubectl` commands and possible solutions.
-- **Streamlit Dashboard:** Displays pod health, restart counts, and diagnostic results through an interactive dashboard.
-- **Rule-Based Fallback:** Provides basic diagnostics even when the AI service is unavailable.
+![Pod Monitoring](media/img02.png)
+
+![AI Troubleshooting Report](media/img03.png)
+
+![Recommended Troubleshooting Commands](media/img04.png)
+
+![Suggested Resolutions](media/img05.png)
+
+## ✨ Features
+
+- **AI-Powered Troubleshooting:** Uses Google Gemini to analyze Kubernetes pod information and generate diagnostic reports.
+- **Automated Diagnostics:** Detects common issues such as `CrashLoopBackOff`, `ImagePullBackOff`, and `Pending` pods.
+- **Severity Classification:** Categorizes detected issues based on their potential impact.
+- **Troubleshooting Recommendations:** Generates relevant `kubectl` commands and suggested resolutions.
+- **Interactive Dashboard:** Displays pod health, restart counts, and detected issues through Streamlit.
+- **Rule-Based Fallback:** Provides basic diagnostic insights when AI analysis is unavailable.
 - **Modular Architecture:** Separates Kubernetes diagnostics, AI analysis, and dashboard functionality.
 
-## Dashboard
-
-The Streamlit dashboard provides an overview of Kubernetes pod health, including:
-
-- Total pods
-- Healthy pods
-- Pods with issues
-- Container restart counts
-- AI-generated troubleshooting reports
-
-*The current dashboard uses sample pod data. Live cluster integration is a planned enhancement.*
-
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Core application |
 | Streamlit | Interactive dashboard |
-| Google Gemini API | AI-powered troubleshooting |
-| Kubernetes Python Client | Kubernetes cluster interaction |
-| python-dotenv | Environment variable management |
+| Google Gemini API | AI-powered analysis |
+| Kubernetes Python Client | Kubernetes interaction |
+| python-dotenv | Environment configuration |
 | Pytest | Automated testing |
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 kubemind-ai/
@@ -60,18 +58,25 @@ kubemind-ai/
 │   ├── test_cluster.py
 │   └── test_diagnostics.py
 │
+├── media/
+│   ├── img01.png
+│   ├── img02.png
+│   ├── img03.png
+│   ├── img04.png
+│   └── img05.png
+│
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
 └── README.md
 ```
 
-## Getting Started
+## ⚙️ Getting Started
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/kubemind-ai.git
+git clone https://github.com/ShravyaMalogi/kubemind-ai.git
 cd kubemind-ai
 ```
 
@@ -83,43 +88,39 @@ pip install -r requirements.txt
 
 ### 3. Configure environment variables
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root and add your Gemini API credentials:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_MODEL=gemini-3.8-flash
 ```
 
-Get your Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey).
+Get your API key from [Google AI Studio](https://aistudio.google.com/apikey).
 
-**Important:** Never commit your `.env` file or expose your API key publicly.
+**Note:** Never commit your `.env` file or expose your API key publicly.
 
 ### 4. Run the application
 
 ```bash
-python -m streamlit run app/dashboard.py --server.address 0.0.0.0
+streamlit run app/dashboard.py
 ```
 
-Open the Streamlit URL provided in your terminal to access the dashboard.
+Open the local URL displayed in your terminal to access the dashboard.
 
-## How It Works
+## 🧪 Running Tests
 
-1. Kubernetes pod information is collected or supplied to the diagnostic engine.
-2. The diagnostic module identifies common pod issues.
-3. The AI engine sends relevant diagnostic information to Google Gemini.
-4. Gemini analyzes the information and generates a troubleshooting explanation.
-5. The dashboard displays the diagnosis, severity, recommended commands, and suggested resolution.
-6. If AI analysis fails, KubeMind falls back to its rule-based diagnostic engine.
-
-## Running Tests
-
-Run the automated tests using:
+Run the automated test suite using:
 
 ```bash
 pytest -v
 ```
+
+## 🔮 Future Enhancements
+
+- Live Kubernetes cluster integration.
+- Real-time pod monitoring and diagnostics.
+- Automated detection of resource and configuration issues.
+
 ---
 
-KubeMind AI was built to explore the intersection of **Artificial Intelligence, Kubernetes, and DevOps**.
-
-The goal is to simplify Kubernetes troubleshooting by combining traditional diagnostic techniques with AI-generated explanations, helping developers understand infrastructure problems and investigate them more efficiently.
+**KubeMind AI** explores the intersection of **Artificial Intelligence, Kubernetes, and DevOps**, making infrastructure troubleshooting more accessible through intelligent diagnostics and AI-powered recommendations.
